@@ -31,3 +31,10 @@ The storage itself consists of multiple blocks of data chained together like the
   <li>Fair and transparent.</li>
   <li>Trustless</li>
  </ul>
+ <h3>Why Use the Blockchain?</h3>
+ <ul>
+  <li>Decentralization leads to a trustless system, in the sense that you don't place all the power of recording transations within one organization.</li>
+  <li>No middle men and fees, trade with each other directly without having to rely on a bank or an acountant to officially document the transaction.</li>
+  <li>Highly secure and no central point of failure, in this system an attacker needs to take over thousands if not millions of nodes and computers to hijack the network.</li>
+  <li>Dependable data</li>
+  </ul>
