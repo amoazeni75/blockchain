@@ -42,9 +42,16 @@ The storage itself consists of multiple blocks of data chained together like the
 <p>the first usecase is cryptocurrency. A cryptocurrency has a blockchain as one piece in its puzzle.</p>
 <h4>Cryptocurrency</h4>
 <ul>
-  <li>Cryptocurrency itself is a digital medium of exchang.</li>
+  <li>Cryptocurrency itself is a digital medium of exchange.</li>
   <li>It has three main features: a secure blockchain, wallets, and mining.</li>
   </ul>
   <h5>How it is Secure?</h5>
   <p>Although everyone has access to the data, a cryptocurrency use cryptography to add a layer of security to the blockchain. Each endividual has a digital signiture ( a private and public key). Each nodes use its private key to sign the data, so other nodes will noticed if any change happen in the signed data.</p>
   <h5>Wallets</h5>
+<ul>
+  <li>Objects that stores the private and public key of an individual.</li>
+  <li>The public key is the address of the wallet.</li>
+  <li>Help sign transactions data.</li>
+</ul>
+<h5>Mining</h5>
+<p>miners do the work of adding transactions to the blockchain.</p>
