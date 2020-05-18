@@ -1,6 +1,6 @@
 <h1>Blockchain</h1>
 <h3>Goal</h3>
-<p>design an application with the underlaying like bitcoin</p>
+<p>Design an application with the underlaying like bitcoin</p>
 <h3>Road Map</h3>
 <ol>
   <li>Code the core blockchain, create block and blockchain objects in OOP style</li>
