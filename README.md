@@ -55,3 +55,7 @@ The storage itself consists of multiple blocks of data chained together like the
 </ul>
 <h5>Mining</h5>
 <p>miners do the work of adding transactions to the blockchain.</p>
+<ul>
+  <li>Transactions are temporarily "unconfirmed", when each node submits a transaction, it takes a time to add in the blockchain</li>
+  <li>Include blocks of transactions by solving a "proof of work" algorithm. Miners will take a group of unconfirmed transactions and include them within a block in the chain.</li>
+ </ul>
