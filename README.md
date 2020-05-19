@@ -64,4 +64,6 @@ The storage itself consists of multiple blocks of data chained together like the
   <li> Install NodeJs</li>
   <li>Create a folder, for example "blockchain" and inside it execute command line then enter: <code> npm init -y</code></li>
   <li>Install "nodemon" for live development dependancy for our project, inside project's folder enter: <code> npm i nodemon --save-dev</code></li>
+  <li>To run the "dev-test.js" addd the following code inside "script" section in the config.js file: <code>"dev-test" : "nodemon dev-test.js"</code>
+    then enter this in the command line: <code>npm run dev-test</code></li>
  </ul>
