@@ -62,5 +62,6 @@ The storage itself consists of multiple blocks of data chained together like the
 <h3>Configuraing the Project</h3>
 <ul>
   <li> Install NodeJs</li>
-  <li>Creat a folder, for example "blockchain" and inside it execute command line then enter <code> npm init -y</code></li>
+  <li>Create a folder, for example "blockchain" and inside it execute command line then enter: <code> npm init -y</code></li>
+  <li>Install "nodemon" for live development dependancy for our project, inside project's folder enter: <code> npm i nodemon --save-dev</code></li>
  </ul>
