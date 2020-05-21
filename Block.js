@@ -23,6 +23,16 @@ class Block {
     static genesis() {
         return new this("Genesis Time", "-----", "f1er56-s4odw", [])
     }
+
+    static mineBlock(lastBlock, data) {
+        /**
+         * data are what we want to store
+         */
+        const timestamp = Date.now();
+        const lastHash = lastBlock.hash;
+        const hash = 'todo-hash';
+        return new this(timestamp, lastHash, hash, data);
+    }
 }
 
 module.exports = Block;
