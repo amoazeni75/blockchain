@@ -66,4 +66,7 @@ The storage itself consists of multiple blocks of data chained together like the
   <li>Install "nodemon" for live development dependancy for our project, inside project's folder enter: <code> npm i nodemon --save-dev</code></li>
   <li>To run the "dev-test.js" addd the following code inside "script" section in the config.js file: <code>"dev-test" : "nodemon dev-test.js"</code>
     then enter this in the command line: <code>npm run dev-test</code></li>
+  <li>To use SHA-256 hash function, we will install crypto-js, <code> npm i crypto-js --save</li>
  </ul>
+ <h4>Genesis Block</h4>
+ <p>For the first block, we must have some initial data, to solve this subject we design a genesis block to seed the information into the first block.</h4>
