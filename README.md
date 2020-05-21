@@ -59,7 +59,7 @@ The storage itself consists of multiple blocks of data chained together like the
   <li>Transactions are temporarily "unconfirmed", when each node submits a transaction, it takes a time to add in the blockchain</li>
   <li>Include blocks of transactions by solving a "proof of work" algorithm. Miners will take a group of unconfirmed transactions and include them within a block in the chain.</li>
  </ul>
-<h3>Configuraing the Project</h3>
+<h3>Configuring the Project</h3>
 <ul>
   <li> Install NodeJs</li>
   <li>Create a folder, for example "blockchain" and inside it execute command line then enter: <code> npm init -y</code></li>
