@@ -1,4 +1,4 @@
-const Block = require('./Block')
+const Block = require('./block')
 
 const block_instance = new Block('T', 'LH', 'H', 'D');
 console.log(block_instance.toString());
