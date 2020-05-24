@@ -10,13 +10,16 @@ app.use(bodyParser.json()); //this is a middleware which convert post request to
 const bc = new Blockchain();
 
 //end point for getting the chain
-//localhost:3000/blocks/
+//get:localhost:3000/blocks/
 app.get('/blocks', (req, res) => {
     res.json(bc.chain)
 });
 
 //end point adding block by miners
-//
+//post:localhost:3000/blocks/
+//{
+// 	"data": "new data added by a miner"
+// }
 app.post('/mine', (req, res) => {
     const block = bc.addBlock(req.body.data);
     console.log(`New block added with this data: ${block.toString()}`);
