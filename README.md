@@ -74,7 +74,7 @@ The storage itself consists of multiple blocks of data chained together like the
  </ul>
  <h5>51% Attack</h5>
  <ul>
-  <li>A dishonest miner has more than at least 51% of the network's power.<li>
+  <li>A dishonest miner has more than at least 51% of the network's power.</li>
   <li>A 51% attack for bitcoin would be more than $6 billion (start of 2018)</li>
  </ul>
 <h3>Configuring the Project</h3>
