@@ -27,7 +27,7 @@ class P2pServer {
 
         this.messageHandler(socket) //to register message handler to the socket
 
-        socket.send(JSON.stringify(this.blockchain.chain));
+        this.sendChain(socket);
     }
 
     connectToPeers() {
@@ -40,12 +40,22 @@ class P2pServer {
         })
     }
 
+    sendChain(socket) {
+        socket.send(JSON.stringify(this.blockchain.chain));
+    }
+
     messageHandler(socket) {
         //a socket sends a message as an event, so we need message handler (event listener)
         //the first parameter is the name of event that want to handle
         socket.on('message', message => {
             const data = JSON.parse(message); //because the message is the type of string, need to convert it to the js object
-            console.log('data', data);
+            this.blockchain.replaceChain(data);
+        });
+    }
+
+    syncChain() {
+        this.sockets.forEach(socket => {
+            this.sendChain(socket)
         });
     }
 }
