@@ -68,7 +68,7 @@ The storage itself consists of multiple blocks of data chained together like the
   <li>Hashcash was a proof-of-work system to prevent email spamming. for any given level it has a difficulty which is equal to the
     number of zeros must be placed in the front of hash, for example if we have difficulty = 6, the 000000sakjdkjfsf would be valid</li>
   <li>Generate hashes until a one with the matching leading 0's is found.</li>
-  <li>A "nounce" value adjusts in order to generate new hashes.</li>
+  <li>A "nonce" value adjusts in order to generate new hashes.</li>
   <li>This computational work is "mining".</li>
   <li>The difficulty sets a rate of mining.</li>
  </ul>
