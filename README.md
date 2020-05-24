@@ -59,6 +59,24 @@ The storage itself consists of multiple blocks of data chained together like the
   <li>Transactions are temporarily "unconfirmed", when each node submits a transaction, it takes a time to add in the blockchain</li>
   <li>Include blocks of transactions by solving a "proof of work" algorithm. Miners will take a group of unconfirmed transactions and include them within a block in the chain.</li>
  </ul>
+ <h5>Proof of Work System</h5>
+  <ul>
+  <li>A system that requires miners to do computational work to add blocks. This has the benefit of dettering dishonest peers from replacing blockchain with corrupt and invalid data.</li>
+  <li>Any peer can replace the blockchain.</li>
+  <li>The proof-of-work make it expensive to generate corrupt chains.</li>
+  <li>Manageable to submit one block, unproductive to generate an entire chain.</li>
+  <li>Hashcash was a proof-of-work system to prevent email spamming. for any given level it has a difficulty which is equal to the
+    number of zeros must be placed in the front of hash, for example if we have difficulty = 6, the 000000sakjdkjfsf would be valid</li>
+  <li>Generate hashes until a one with the matching leading 0's is found.</li>
+  <li>A "nounce" value adjusts in order to generate new hashes.</li>
+  <li>This computational work is "mining".</li>
+  <li>The difficulty sets a rate of mining.</li>
+ </ul>
+ <h5>51% Attack</h5>
+ <ul>
+  <li>A dishonest miner has more than at least 51% of the network's power.<li>
+  <li>A 51% attack for bitcoin would be more than $6 billion (start of 2018)</li>
+ </ul>
 <h3>Configuring the Project</h3>
 <ul>
   <li> Install NodeJs</li>
