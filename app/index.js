@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const Blockchain = require('../blockchain');
+const P2pServer = require('./p2p-server');
 
 const HTTP_PORT = process.env.HTTP_PORT || 3000; //USER specify port or use default
 
@@ -8,6 +9,7 @@ const app = express();
 app.use(bodyParser.json()); //this is a middleware which convert post request to json format
 
 const bc = new Blockchain();
+const p2pServer = new P2pServer(bc);
 
 //end point for getting the chain
 //get:localhost:3000/blocks/
@@ -28,4 +30,7 @@ app.post('/mine', (req, res) => {
 });
 
 app.listen(HTTP_PORT, () => console.log(`Listening on Port ${HTTP_PORT}`));
+p2pServer.listen();
 
+
+//HTTP_PORT=3001 P2P_PORT=5002 PEERS=ws://localhost:5001 npm run dev
