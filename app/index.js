@@ -25,6 +25,10 @@ app.get('/transactions', (req, res) => {
     res.json(tp.transactions);
 });
 
+app.get('/public-key', (req, res) => {
+    res.json({publicKey: wallet.publicKey});
+});
+
 //end point adding block by miners
 //post:localhost:3000/blocks/
 //{
