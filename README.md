@@ -90,6 +90,8 @@ The storage itself consists of multiple blocks of data chained together like the
   <li>For API section, we need Express module, <code> npm i express --save</code></li>
   <li>To handle post requests in json format, <code> npm i body-parser --save</code></li>
   <li>For implementing the peer-to-peer server, <code> npm i ws --save</code></li>
+  <li>For generating public and private key, <code> npm i elliptic --save</code></li>
+  <li>To assign a unique ID to each trransaction, <code> npm i uuid --save</code></li>
  </ul>
  <h4>Genesis Block</h4>
  <p>For the first block, we must have some initial data, to solve this subject we design a genesis block to seed the information into the first block.</h4>
