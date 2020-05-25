@@ -8,9 +8,13 @@
 // const fooBlock = Block.mineBlock(Block.genesis(), 'foo data')
 // console.log(fooBlock.toString())
 
-const Blockchain = require('./blockchain');
-const bc = new Blockchain();
+// const Blockchain = require('./blockchain');
+// const bc = new Blockchain();
+//
+// for (let i = 0; i < 10; ++i) {
+//     console.log(bc.addBlock(`data ${i}`).toString());
+// }
 
-for (let i = 0; i < 10; ++i) {
-    console.log(bc.addBlock(`data ${i}`).toString());
-}
+const Wallet = require('./wallet')
+const w = new Wallet();
+console.log(w.toString());
