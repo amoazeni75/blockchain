@@ -9,6 +9,22 @@ class Transaction {
         //the sender would have after the transaction completed.
     }
 
+    update(senderWallet, recipient, amount) {
+        //when a sender wants to send money to two recipient in a short time, we can merge
+        //these two request into one transaction
+        const senderOutput = this.outputs.find(output => output.address === senderWallet.publicKey);
+        if (amount > senderOutput.amount) {
+            console.log(`Amount : ${amount} exceeds sender balance`);
+            return;
+        }
+
+        senderOutput.amount = senderOutput.amount - amount;
+        this.outputs.push({amount, address: recipient});
+        Transaction.signTransaction(this, senderWallet);
+
+        return this;
+    }
+
     static newTransaction(senderWallet, recipient, amount) {
         if (amount > senderWallet.balance) {
             console.log(`Amount : ${amount} exceeds balance.`);
@@ -32,7 +48,7 @@ class Transaction {
         };
     }
 
-    static verifyTransaction(transaction){
+    static verifyTransaction(transaction) {
         return ChainUtil.verifySignature(
             transaction.input.address,
             transaction.input.signature,
