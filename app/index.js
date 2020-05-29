@@ -4,6 +4,7 @@ const Blockchain = require('../blockchain');
 const P2pServer = require('./p2p-server');
 const Wallet = require('../wallet');
 const TransactionPool = require('../wallet/transaction-pool');
+const Miner = require('./miner');
 
 const HTTP_PORT = process.env.HTTP_PORT || 3000; //USER specify port or use default
 
@@ -14,6 +15,7 @@ const bc = new Blockchain();
 const wallet = new Wallet();
 const tp = new TransactionPool();
 const p2pServer = new P2pServer(bc, tp);
+const miner = new Miner(bc, tp, wallet, p2pServer);
 
 //end point for getting the chain
 //get:localhost:3000/blocks/
@@ -27,6 +29,12 @@ app.get('/transactions', (req, res) => {
 
 app.get('/public-key', (req, res) => {
     res.json({publicKey: wallet.publicKey});
+});
+
+app.get('/mine-transactions', (req, res) => {
+    const block = miner.mine();
+    console.log(`New block added: ${block.toString()}`);
+    res.redirect('/blocks');
 });
 
 //end point adding block by miners
