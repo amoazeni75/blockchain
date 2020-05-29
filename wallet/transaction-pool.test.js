@@ -1,13 +1,15 @@
-const TransactionPool = require('./transaction-pool')
-const Transaction = require('./transaction')
-const Wallet = require('./index')
+const TransactionPool = require('./transaction-pool');
+const Transaction = require('./transaction');
+const Wallet = require('./index');
+const Blockchain = require('../blockchain');
 
 describe('TransactionPool', () => {
-    let tp, wallet, transaction;
+    let tp, wallet, transaction, bc;
     beforeEach(() => {
         tp = new TransactionPool();
         wallet = new Wallet();
-        transaction = wallet.createTransaction('edfkdk-fsfsf', 50, tp);
+        bc = new Blockchain();
+        transaction = wallet.createTransaction('edfkdk-fsfsf', 50, bc, tp);
     });
 
     it('adds a transaction to the pool', () => {
@@ -21,7 +23,7 @@ describe('TransactionPool', () => {
         expect(JSON.stringify(tp.transactions.find(t => t.id === newTransaction.id))).not.toEqual(oldTransaction);
     });
 
-    it('clear transactions', ()=>{
+    it('clear transactions', () => {
         tp.clear();
         expect(tp.transactions).toEqual([]);
     })
@@ -32,7 +34,7 @@ describe('TransactionPool', () => {
             validTransaction = [...tp.transactions];
             for (let i = 0; i < 6; ++i) {
                 wallet = new Wallet();
-                transaction = wallet.createTransaction('ssfsfd-sdfs', 42, tp);
+                transaction = wallet.createTransaction('ssfsfd-sdfs', 42, bc, tp);
                 if (i % 2 == 0) {
                     transaction.input.amount = 234324;
                 } else {
